@@ -9,25 +9,37 @@ router.get("/", (req, res) => {
       var handleBarsObj = {
           burgers: data 
       }
-      response.render("index", handleBarsObj)
+      res.render("index", handleBarsObj)
   });
 });
 
-router.post("/api/burger", (req, res) => {
- burger.create(['burgers'], [req.body.burgers], res => {
-  response.json({id: res.insertId})
+router.post("/burgers", (req, res) => {
+  console.log(">",req.body.burgers)
+ burger.create(['burgers'], [req.body.burgers], data => {
+  res.redirect("/");
 });
 });
 
-router.put("/api/burger/:id", (req, res) => {
- burger.update({devoured: (req.body.devoured) ? true:false},
- {
-     id: req.params.id
- }, res => {
-  if (res.changedRows === 0) {
-      return response.status(404).end()
-  }
-  response.status(200).end()
- });
+router.put("/burgers/:id", function (req, res) {
+  var condition = "id = " + req.params.id;
+
+  burger.update({
+      devoured: true
+  }, condition, function (data) {
+      res.redirect("/");
+
+  });
 });
-  module.exports = router;
+
+// router.put("burgers/:id", (req, res) => {
+//  burger.update({devoured: (req.body.devoured) ? true:false},
+//  {
+//      id: req.params.id
+//  }, data => {
+//   if (data.changedRows === 0) {
+//       return res.status(404).end()
+//   }
+//   res.status(200).end()
+//  });
+// });
+module.exports = router;
