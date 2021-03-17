@@ -1,13 +1,13 @@
-drop database if exists burgers;
+drop database if exists burgersdb;
 
-create database if not exists burgers;
+create database if not exists burgersdb;
 
-use burgers;
+use burgersdb;
 
 create table burgers (
 id int not null auto_increment,
 
-burgers varchar(55) default null,
+burger_name varchar(55) default null,
 
 devoured boolean default false, 
 
