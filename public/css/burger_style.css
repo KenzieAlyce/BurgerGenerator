@@ -1,0 +1,100 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(117, 74, 9);
+}
+
+.title {
+    font-family: 'Sigmar One', cursive;
+    font-size: 60px;
+    color: #000000;
+    padding: 20px;
+}
+
+.burger-title {
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#list-devoured {
+    margin: 10px;
+    height: 300px;
+    overflow: auto;
+    background-color: #e8f34c;
+}
+
+#list-burgers {
+    margin: 10px;
+    height: 300px;
+    overflow: auto;
+    background-color: #e8f34c;
+}
+
+.container {
+    padding: 10px;
+}
+
+.available-burgers {
+    overflow: hidden;
+    font-size: 20px;
+    margin: 8px;
+    border: 2px solid #197767;
+    padding: 3px;
+}
+
+.devoured-burgers {
+    font-size: 20px;
+    margin: 8px;
+    border: 2px solid #cf733e;
+    padding: 3px;
+}
+
+#burger-ready {
+    float: right;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #db1515c0;
+}
+
+#burger-ready:hover {
+    color: #000000;
+    border: 3px solid  #cf733e;
+    background-color: rgb(255, 255, 255);
+}
+
+#add-burger{
+    margin: 0 auto; 
+    width: 250px;
+    margin-bottom: 50px;
+}
+
+#enter-burger {
+    font-size: 25px;
+    width: 200px;
+    height: 50px;
+    align-content: center;
+    color: #000000;
+    background-color: #9ca337;   
+}
+
+#submit-burger {
+    font-size: 20px;
+    height: 40px;
+    margin: 0 auto; 
+    width: 200px;
+    padding: 10px;
+    color: #000000;
+    background-color: #c91d1d;
+}
+
+#submit-burger:hover {
+    border: 3px solid #62EDD6;
+    color: #000000;
+    background-color:#ffffff;
+}
+
+#gif {
+    width: 300px;
+    height: auto;
+}
